@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Justificación Editorial — Especial IA</title>
+    <title>Justificación — Especial IA</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Lora:ital,wght@0,400;0,600;1,400&family=Plus+Jakarta+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Plus+Jakarta+Sans:wght@400;500;700&display=swap" rel="stylesheet">
     <style>
         :root {
             --bg: #fdfdfb;
@@ -14,7 +14,6 @@
             --muted: #5a5a5a;
             --accent: #8b1e0f;
             --border: #eaeaea;
-            --font-title: 'Cinzel', serif;
             --font-serif: 'Lora', Georgia, serif;
             --font-sans: 'Plus Jakarta Sans', sans-serif;
         }
@@ -23,20 +22,22 @@
         
         .site-nav { position: sticky; top: 0; background: rgba(253, 253, 251, 0.98); border-bottom: 1px solid var(--border); z-index: 1000; padding: 15px 20px; backdrop-filter: blur(8px); }
         .nav-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
-        .nav-logo { font-family: var(--font-title); font-weight: 700; font-size: 1.3rem; text-decoration: none; color: var(--text); }
+        .nav-logo { font-family: var(--font-serif); font-weight: 700; font-size: 1.3rem; text-decoration: none; color: var(--text); letter-spacing: 0.5px; }
         .nav-links { display: flex; list-style: none; gap: 30px; }
         .nav-links a { text-decoration: none; color: var(--muted); font-size: 0.9rem; font-weight: 500; text-transform: uppercase; }
         .nav-links a:hover { color: var(--accent); }
 
-        .article-container { max-width: 750px; margin: 70px auto; padding: 0 20px; }
-        .article-header h1 { font-family: var(--font-serif); font-size: 2.8rem; line-height: 1.2; margin-bottom: 15px; font-weight: 600; }
-        .meta-text { color: var(--muted); font-size: 1rem; margin-bottom: 40px; border-bottom: 1px solid var(--border); padding-bottom: 20px; }
+        .article-header { max-width: 850px; margin: 80px auto 40px auto; text-align: center; padding: 0 20px; }
+        .kicker { font-size: 0.85rem; text-transform: uppercase; letter-spacing: 2px; color: var(--accent); font-weight: 700; margin-bottom: 15px; display: block; }
+        .article-header h1 { font-family: var(--font-serif); font-size: 3rem; line-height: 1.2; font-weight: 600; margin-bottom: 25px; color: #111; }
 
-        .article-body { font-family: var(--font-serif); font-size: 1.2rem; color: #222; }
+        .article-body { max-width: 720px; margin: 0 auto; padding: 0 20px; font-family: var(--font-serif); font-size: 1.25rem; color: #222; }
         .article-body p { margin-bottom: 25px; text-align: justify; }
-        .article-body h2 { font-family: var(--font-sans); font-size: 1.1rem; margin: 40px 0 15px 0; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: var(--accent); }
+        .article-body h2 { font-family: var(--font-sans); font-size: 1.4rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; color: var(--accent); margin: 50px 0 20px 0; }
         
-        .accent-block { background: #fdf8f7; border: 1px solid #f0d0cc; padding: 25px; margin: 30px 0; border-radius: 4px; font-family: var(--font-sans); font-size: 1rem; color: #444; }
+        .resources-list { list-style: none; margin: 20px 0 40px 0; }
+        .resources-list li { font-family: var(--font-sans); font-size: 1rem; color: #334155; padding: 12px 15px; background: #f8fafc; border: 1px solid var(--border); margin-bottom: 10px; border-radius: 4px; display: flex; align-items: center; gap: 10px; }
+        .resources-list li::before { content: "✓"; color: var(--accent); font-weight: bold; }
 
         footer { border-top: 1px solid var(--border); padding: 50px 20px; text-align: center; background: #fff; margin-top: 100px; font-size: 0.9rem; color: var(--muted); }
     </style>
@@ -49,36 +50,37 @@
             <ul class="nav-links">
                 <li><a href="index.html">Inicio</a></li>
                 <li><a href="reportaje.html">Reportaje</a></li>
+                <li><a href="entrevistas.html">Entrevistas</a></li>
                 <li><a href="justificacion.html">Justificación</a></li>
             </ul>
         </div>
     </nav>
 
-    <article class="article-container">
-        <header class="article-header">
-            <h1>Memoria y Justificación Académica</h1>
-            <p class="meta-text">Criterios editoriales, marco analítico y metodología del especial multimedia.</p>
-        </header>
+    <header class="article-header">
+        <span class="kicker">Memoria del Proyecto</span>
+        <h1>Justificación Metodológica y Criterios Editoriales</h1>
+    </header>
 
-        <div class="article-body">
-            <h2>1. Interés del tema e idoneidad</h2>
-            <p>La irrupción de modelos masivos de lenguaje y algoritmos generativos representa el mayor cambio estructural en la profesión periodística desde la llegada de internet. Este especial se justifica por la urgencia de analizar de qué manera la automatización altera la formación en las aulas de la Universidad Complutense de Madrid y se cruza con las rutinas laborales de las redacciones económicas actuales.</p>
+    <main class="article-body">
+        <h2>Interés del Tema</h2>
+        <p>La irrupción de la Inteligencia Artificial generativa representa el cambio más disruptivo en el ecosistema de los medios de comunicación desde la llegada de Internet. Este proyecto nace de la necesidad de analizar de manera crítica cómo afecta esta transición a los futuros redactores y cómo las facultades y redacciones deben reaccionar ante una automatización inevitable.</p>
 
-            <h2>2. Objetivos y funciones del especial</h2>
-            <p>El portal busca cumplir una doble función pedagógica e informativa: sintetizar las opiniones de expertos de la docencia teórica frente a profesionales que operan la IA directamente en entornos de producción diaria masiva. Se pretende desmitificar la tecnología entendiéndola como un asistente de datos avanzados y no como un reemplazo directo del análisis intelectual.</p>
+        <h2>Valoración del Enfoque</h2>
+        <p>Para dotar al reportaje de una perspectiva equilibrada, se ha optado por un enfoque dual. Por un lado, se recoge la visión académica y teórica a través de la investigación universitaria y, por el otro, la experiencia práctica e inmediata de la trinchera informativa en una redacción diaria de información económica y tecnológica.</p>
 
-            <h2>3. Concepto gráfico y visual</h2>
-            <p>Para la maquetación de este vertical interactivo se ha seleccionado un diseño de "lectura reposada" (*slow journalism*). La combinación de tipografías clásicas serif con estructuras web modernas y dinámicas busca emular la identidad visual de los reportajes de investigación de cabeceras internacionales de prestigio.</p>
+        <h2>Recursos Multimedia Utilizados</h2>
+        <p>Con el fin de construir una experiencia narrativa multimedia enriquecida y atractiva para el lector digital, se han integrado de forma nativa los siguientes recursos dentro del código del sitio web:</p>
 
-            <div class="accent-block">
-                <strong>Nota metodológica:</strong> Todas las imágenes utilizadas para vestir el especial gráfico provienen de repositorios multimedia de código abierto y licencias editoriales libres (Unsplash).
-            </div>
-        </div>
-    </article>
+        <ul class="resources-list">
+            <li><strong>Fotografías de Perfil:</strong> Retratos de los dos protagonistas principales (`pedrogar.jpg` y `fotomarcos.jpeg`) alojados de forma local para ilustrar los bloques biográficos.</li>
+            <li><strong>Imágenes Conceptuales:</strong> Fotografías de alta calidad tomadas de Unsplash y Google DeepMind mediante enlaces optimizados.</li>
+            <li><strong>Vídeo Incrustado:</strong> Integración directa del reproductor de YouTube (`<iframe>`) para visualizar la entrevista audiovisual complementaria en alta definición.</li>
+        </ul>
+    </main>
 
     <footer>
         <p><strong>Facultad de Ciencias de la Información</strong></p>
-        <p>Universidad Complutense de Madrid · Convocatoria 2026</p>
+        <p>Universidad Complutense de Madrid · Trabajo Evaluatorio</p>
     </footer>
 
 </body>
