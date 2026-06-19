@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entrevistas — Especial IA</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Plus+Jakarta+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #fdfdfb;
+            --text: #1a1a1a;
+            --muted: #5a5a5a;
+            --accent: #8b1e0f;
+            --border: #eaeaea;
+            --font-serif: 'Lora', Georgia, serif;
+            --font-sans: 'Plus Jakarta Sans', sans-serif;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { background-color: var(--bg); color: var(--text); font-family: var(--font-sans); line-height: 1.8; }
+        
+        .site-nav { position: sticky; top: 0; background: rgba(253, 253, 251, 0.98); border-bottom: 1px solid var(--border); z-index: 1000; padding: 15px 20px; backdrop-filter: blur(8px); }
+        .nav-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+        .nav-logo { font-family: var(--font-serif); font-weight: 700; font-size: 1.3rem; text-decoration: none; color: var(--text); letter-spacing: 0.5px; }
+        .nav-links { display: flex; list-style: none; gap: 30px; }
+        .nav-links a { text-decoration: none; color: var(--muted); font-size: 0.9rem; font-weight: 500; text-transform: uppercase; }
+        .nav-links a:hover { color: var(--accent); }
+
+        .article-header { max-width: 850px; margin: 80px auto 40px auto; text-align: center; padding: 0 20px; }
+        .kicker { font-size: 0.85rem; text-transform: uppercase; letter-spacing: 2px; color: var(--accent); font-weight: 700; margin-bottom: 15px; display: block; }
+        .article-header h1 { font-family: var(--font-serif); font-size: 3rem; line-height: 1.2; font-weight: 600; margin-bottom: 25px; color: #111; }
+
+        .article-body { max-width: 720px; margin: 0 auto; padding: 0 20px; font-family: var(--font-serif); font-size: 1.25rem; color: #222; }
+        .article-body h2 { font-family: var(--font-sans); font-size: 1.5rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; color: var(--accent); margin: 60px 0 20px 0; border-bottom: 2px solid var(--accent); padding-bottom: 8px; }
+        
+        .question { font-family: var(--font-sans); font-size: 1.1rem; font-weight: 700; color: #111; margin-top: 35px; margin-bottom: 10px; border-left: 3px solid var(--accent); padding-left: 15px; }
+        .answer { margin-bottom: 25px; text-align: justify; }
+        
+        .bio-box { font-family: var(--font-sans); background: #f8fafc; border: 1px solid var(--border); padding: 25px; margin: 40px 0 25px 0; font-size: 0.95rem; color: #334155; border-radius: 6px; display: flex; gap: 25px; align-items: flex-start; }
+        .bio-img-container { flex-shrink: 0; width: 150px; height: 150px; }
+        .bio-img-container img { width: 100%; height: 100%; object-fit: cover; border-radius: 4px; border: 1px solid var(--border); box-shadow: 0 2px 8px rgba(0,0,0,0.04); }
+        .bio-text-container { flex-grow: 1; }
+        .bio-box h4 { text-transform: uppercase; letter-spacing: 1px; color: var(--accent); margin-bottom: 10px; font-size: 0.9rem; }
+
+        .video-wrapper { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; margin: 30px 0 40px 0; border-radius: 6px; box-shadow: 0 4px 20px rgba(0,0,0,0.05); border: 1px solid var(--border); }
+        .video-wrapper iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
+
+        .quote-card { background: #fff; border: 1px solid var(--border); border-left: 4px solid var(--accent); padding: 35px; margin: 45px 0; box-shadow: 0 5px 20px rgba(0,0,0,0.02); position: relative; }
+        .quote-card::before { content: "“"; font-family: var(--font-serif); font-size: 5rem; color: #f0d0cc; position: absolute; top: -10px; left: 20px; z-index: 1; opacity: 0.5; }
+        .quote-text { position: relative; z-index: 2; font-style: italic; margin-bottom: 15px !important; font-size: 1.25rem; color: #111; text-align: left !important; }
+        .quote-author { font-family: var(--font-sans); font-size: 0.9rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: var(--accent); }
+
+        footer { border-top: 1px solid var(--border); padding: 50px 20px; text-align: center; background: #fff; margin-top: 100px; font-size: 0.9rem; color: var(--muted); }
+    </style>
+</head>
+<body>
+
+    <nav class="site-nav">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">TECNOLOGia</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="reportaje.html">Reportaje</a></li>
+                <li><a href="entrevistas.html">Entrevistas</a></li>
+                <li><a href="justificacion.html">Justificación</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="article-header">
+        <span class="kicker">Voces del Sector</span>
+        <h1>Entrevistas Completas: El Futuro del Periodismo ante la IA</h1>
+    </header>
+
+    <main class="article-body">
+
+        <h2>1. Perspectiva Académica</h2>
+        
+        <div class="bio-box">
+            <div class="bio-img-container">
+                <img src="pedrogar.jpg" alt="Pedro García-Alonso">
+            </div>
+            <div class="bio-text-container">
+                <h4>Experto Académico</h4>
+                <p><strong>Pedro García-Alonso</strong> es profesor del Departamento de Periodismo y Comunicación Global de la Universidad Complutense de Madrid (UCM). Doctor por la UCM con la tesis doctoral <em>"El mundo del siglo XXI (1989-1994) Unidad Editorial, S.A., lanzamiento y desarrollo de una empresa informativa"</em> (1995), centra sus investigaciones actuales en el impacto de los nuevos ecosistemas digitales.</p>
+            </div>
+        </div>
+
+        <div class="video-wrapper">
+            <iframe src="https://www.youtube.com/embed/i9KmR3YlOzg" title="Entrevista Pedro García-Alonso" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+
+        <div class="quote-card">
+            <p class="quote-text">"El verdadero pilar del futuro periodista seguirá siendo el criterio humano, la ética incorruptible y la capacidad de contrastar información sobre el terreno."</p>
+            <div class="quote-author">Pedro García-Alonso</div>
+        </div>
+
+
+        <h2>2. La Realidad en las Redacciones</h2>
+        
+        <div class="bio-box">
+            <div class="bio-img-container">
+                <img src="fotomarcos.jpeg" alt="Marcos Rodríguez">
+            </div>
+            <div class="bio-text-container">
+                <h4>Perfil del Entrevistado</h4>
+                <p><strong>Marcos Rodríguez</strong> es redactor en <em>Activos</em>, el suplemento de economía de El Periódico (Prensa Ibérica). Graduado en Periodismo por la Universidad Europea de Madrid, comenzó su trayectoria profesional en <em>Vozpópuli</em>, donde curtió el oficio desde abajo. Actualmente centra su cobertura en información de empleo, mercados financieros y activos digitales (IA, blockchain y criptomonedas).</p>
+            </div>
+        </div>
+
+        <div class="question">Trabajas a diario con información de economía, mercados y tecnología. ¿Cómo ha entrado la inteligencia artificial en tu propia rutina de trabajo como redactor? ¿La usas y para qué?</div>
+        <p class="answer">Sería cínico si dijese que la IA no ha entrado en mi vida. Además, el propio mercado de la IA y sus empresas es algo que suelo cubrir, lo cual resulta paradoxal. Pero sí, me ayudo de la inteligencia artificial cuando lo creo conveniente. No deja de ser una herramienta más, como lo es el propio CMS donde escribo las noticias.</p>
+        <p class="answer">El ejemplo más típico y donde más la uso es cuando recibo o busco algún estudio, informe o investigación: al ser de una longitud densa, la inteligencia artificial me permite activar, estructurar y jerarquizar la información que más necesito para mi noticia, artículo o reportaje. Como suelo necesitar varias fuentes para una misma pieza, esta ayuda se vuelve súper útil en cuanto a velocidad y productividad se refiere.</p>
+        <p class="answer">Eso sí, más allá de las comprobaciones que haya que hacer siempre. Al igual que contrastas algo que te dice una fuente de carne y hueso en un café, un desayuno informativo o una presentación, con la inteligencia artificial has de hacer exactamente lo mismo. De eso va nuestro trabajo, creo yo.</p>
+
+        <div class="question">En una redacción como la de Activos / Prensa Ibérica, ¿qué tareas periodísticas se están apoyando ya en la IA y cuáles siguen siendo cien por cien humanas?</div>
+        <p class="answer">En nuestra redacción de Prensa Ibérica, en concreto, donde nos está ayudando mucho la inteligencia artificial (integrada directamente en nuestro propio CMS) es en el apartado de "contenido relacionado". Cuando la noticia o artículo va para la web, es necesario incluir enlaces, hipervínculos o epígrafes concretos sobre temas vinculados. El periodismo digital funciona así hoy en día, y en estos casos la IA te permite encontrar contenido relacionado con lo que estás redactando que haya podido escribir previamente un compañero tuyo, o tú mismo y ya no te acuerdes.</p>
+
+        <div class="quote-card">
+            <p class="quote-text">"Al igual que contrastas algo que te dice una fuente en un café o un desayuno informativo, con la inteligencia artificial has de lo mismo. De eso va nuestro trabajo."</p>
+            <div class="quote-author">Marcos Rodríguez</div>
+        </div>
+
+        <div class="question">¿Crees que la IA es más una herramienta de apoyo o una amenaza para puestos como el tuyo? Si las tareas de entrada (teletipos, breves, transcripciones) las hace una IA, ¿cómo aprenderá el oficio quien empiece dentro de unos años?</div>
+        <p class="answer">Por mi día a día —donde en muchas ocasiones tienes que estar <italic>in situ</italic> con la noticia o con la fuente, y donde te mueves para obtener la información— creo que la IA no deja de ser una herramienta más; una muy buena, de hecho. El sesgo y el criterio debe ponerlo el periodista, que para eso es el que ha conseguido esos datos.</p>
+        <p class="answer">Ahora bien, a medio y largo plazo sí podrá ser una 'amenaza' o un elemento sustitutorio en ciertas áreas. Esos ejemplos de tareas mecánicas que a día de hoy quizás hacen diez o quince redactores en un medio, el día de mañana con dos o tres personas que supervisen el resultado de la IA será suficiente. Creo que la clave absoluta está en diferenciarse y en hacer cosas que la máquina, al menos a día de hoy, no puede replicar.</p>
+
+        <div class="question">Precisamente en el periodismo económico hay mucho dato, cifra e informe. ¿Hasta dónde puede llegar la automatización sin perder un ápice de calidad?</div>
+        <p class="answer">Ahí es donde nos viene de gran utilidad, pero siempre supervisando. Si la IA tiene alguna "alucinación" con una cifra que sea sensible, puedes tener un problema gordo. Al final, la responsabilidad legal y ética es tuya con tu firma, y del medio por publicar algo erróneo. Bienvenidos sean los filtros rápidos de localización de datos, pero el criterio final es humano.</p>
+
+        <div class="question">Con tanto contenido artificial circulando, ¿crees que la firma de un periodista de carne y hueso vale hoy más o menos que antes?</div>
+        <p class="answer">La firma de un periodista vale exactamente igual que siempre: vale lo que aporte su trabajo. Tú puedes firmar una noticia humana que parezca un publirreportaje o un simple copia-pega de lo que quiere decir una empresa o un político, y esa firma carecerá de valor sin haber tocado la IA. Por el contrario, puedes emplear herramientas de inteligencia artificial para dinamizar tu investigación sin perder tu criterio, tu estilo y el rigor. La firma tendrá el valor que el redactor le imprima con su profesionalidad.</p>
+
+        <div class="question">Para cerrar: ¿cómo te imaginas tu trabajo dentro de cinco años? Y a alguien que está acabando Periodismo ahora en la facultad y tiene miedo de quedarse sin sitio, ¿qué le dirías desde tu experiencia?</div>
+        <p class="answer">De aquí a cinco años veo mi trabajo igual, pero con ritmos seguramente más rápidos. O quizás al revés: a lo mejor la IA nos hace tan productivos que nos permite elaborar más artículos en menos tiempo y eso nos deja ir más tranquilos a la calle para hacer los quehaceres 'extra' de buscar historias reales.</p>
+        <p class="answer">A quien esté acabando la carrera ahora mismo le daría un consejo muy directo: cualquier oportunidad de prácticas, contrato temporal o sustitución, por pequeña que sea, <strong>¡cógela!</strong> Aunque no sea el trabajo de tus sueños o la sección que más te guste, cógela. Nadie tiene el puesto ideal con 20 o 25 años. A partir de ahí, escala. Ve a todos los sitios que te propongan, muévete por ti mismo, conoce a otros periodistas, a empresas, a políticos o a quien sea que cubras. Muévete, conoce gente y tira para arriba poco a poco echándole horas.</p>
+    </main>
+
+    <footer>
+        <p><strong>Facultad de Ciencias de la Información</strong></p>
+        <p>Universidad Complutense de Madrid · Trabajo Evaluatorio</p>
+    </footer>
+
+</body>
+</html>
