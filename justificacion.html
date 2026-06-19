@@ -3,39 +3,82 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Justificación del Proyecto</title>
+    <title>Justificación Editorial — Especial IA</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Lora:ital,wght@0,400;0,600;1,400&family=Plus+Jakarta+Sans:wght@400;500;700&display=swap" rel="stylesheet">
     <style>
-        * { box-sizing: border-box; }
-        body { font-family: Arial, sans-serif; line-height: 1.6; margin: 0; padding: 0; background-color: #f4f4f9; color: #333; }
-        header { background: #1e293b; color: #fff; padding: 30px 20px; text-align: center; }
-        nav { background: #334155; padding: 15px; text-align: center; }
-        nav a { color: white; margin: 0 15px; text-transform: uppercase; font-weight: bold; text-decoration: none; font-size: 14px; }
-        nav a:hover { color: #38bdf8; }
-        .container { max-width: 1000px; margin: 20px auto; padding: 20px; background: #fff; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
-        footer { text-align: center; padding: 25px; background: #1e293b; color: white; margin-top: 40px; }
+        :root {
+            --bg: #fdfdfb;
+            --text: #1a1a1a;
+            --muted: #5a5a5a;
+            --accent: #8b1e0f;
+            --border: #eaeaea;
+            --font-title: 'Cinzel', serif;
+            --font-serif: 'Lora', Georgia, serif;
+            --font-sans: 'Plus Jakarta Sans', sans-serif;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { background-color: var(--bg); color: var(--text); font-family: var(--font-sans); line-height: 1.8; }
+        
+        .site-nav { position: sticky; top: 0; background: rgba(253, 253, 251, 0.98); border-bottom: 1px solid var(--border); z-index: 1000; padding: 15px 20px; backdrop-filter: blur(8px); }
+        .nav-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+        .nav-logo { font-family: var(--font-title); font-weight: 700; font-size: 1.3rem; text-decoration: none; color: var(--text); }
+        .nav-links { display: flex; list-style: none; gap: 30px; }
+        .nav-links a { text-decoration: none; color: var(--muted); font-size: 0.9rem; font-weight: 500; text-transform: uppercase; }
+        .nav-links a:hover { color: var(--accent); }
+
+        .article-container { max-width: 750px; margin: 70px auto; padding: 0 20px; }
+        .article-header h1 { font-family: var(--font-serif); font-size: 2.8rem; line-height: 1.2; margin-bottom: 15px; font-weight: 600; }
+        .meta-text { color: var(--muted); font-size: 1rem; margin-bottom: 40px; border-bottom: 1px solid var(--border); padding-bottom: 20px; }
+
+        .article-body { font-family: var(--font-serif); font-size: 1.2rem; color: #222; }
+        .article-body p { margin-bottom: 25px; text-align: justify; }
+        .article-body h2 { font-family: var(--font-sans); font-size: 1.1rem; margin: 40px 0 15px 0; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: var(--accent); }
+        
+        .accent-block { background: #fdf8f7; border: 1px solid #f0d0cc; padding: 25px; margin: 30px 0; border-radius: 4px; font-family: var(--font-sans); font-size: 1rem; color: #444; }
+
+        footer { border-top: 1px solid var(--border); padding: 50px 20px; text-align: center; background: #fff; margin-top: 100px; font-size: 0.9rem; color: var(--muted); }
     </style>
 </head>
 <body>
 
-    <header>
-        <h1>JUSTIFICACIÓN DEL PROYECTO</h1>
-        <p>Por qué es crucial analizar la Inteligencia Artificial en el periodismo actual</p>
-    </header>
-
-    <nav>
-        <a href="index.html">Inicio</a>
-        <a href="justificacion.html">Justificación</a>
-        <a href="reportaje.html">Reportaje</a>
+    <nav class="site-nav">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">TECNOLOGia</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="reportaje.html">Reportaje</a></li>
+                <li><a href="justificacion.html">Justificación</a></li>
+            </ul>
+        </div>
     </nav>
 
-    <div class="container">
-        <h2>¿Por qué este especial tecnológico?</h2>
-        <p>La inserción de la Inteligencia Artificial (IA) en las redacciones de los medios de comunicación no es una posibilidad del futuro, es una realidad presente. Este proyecto nace con la necesidad de investigar el impacto ético, laboral y creativo que estas herramientas implican para los profesionales de la información.</p>
-        <p>A través de este espacio, buscamos poner sobre la mesa los desafíos urgentes: la verificación de datos frente a las 'fake news' generadas por algoritmos, y la automatización de textos frente al valor del periodismo humano y de investigación.</p>
-    </div>
+    <article class="article-container">
+        <header class="article-header">
+            <h1>Memoria y Justificación Académica</h1>
+            <p class="meta-text">Criterios editoriales, marco analítico y metodología del especial multimedia.</p>
+        </header>
+
+        <div class="article-body">
+            <h2>1. Interés del tema e idoneidad</h2>
+            <p>La irrupción de modelos masivos de lenguaje y algoritmos generativos representa el mayor cambio estructural en la profesión periodística desde la llegada de internet. Este especial se justifica por la urgencia de analizar de qué manera la automatización altera la formación en las aulas de la Universidad Complutense de Madrid y se cruza con las rutinas laborales de las redacciones económicas actuales.</p>
+
+            <h2>2. Objetivos y funciones del especial</h2>
+            <p>El portal busca cumplir una doble función pedagógica e informativa: sintetizar las opiniones de expertos de la docencia teórica frente a profesionales que operan la IA directamente en entornos de producción diaria masiva. Se pretende desmitificar la tecnología entendiéndola como un asistente de datos avanzados y no como un reemplazo directo del análisis intelectual.</p>
+
+            <h2>3. Concepto gráfico y visual</h2>
+            <p>Para la maquetación de este vertical interactivo se ha seleccionado un diseño de "lectura reposada" (*slow journalism*). La combinación de tipografías clásicas serif con estructuras web modernas y dinámicas busca emular la identidad visual de los reportajes de investigación de cabeceras internacionales de prestigio.</p>
+
+            <div class="accent-block">
+                <strong>Nota metodológica:</strong> Todas las imágenes utilizadas para vestir el especial gráfico provienen de repositorios multimedia de código abierto y licencias editoriales libres (Unsplash).
+            </div>
+        </div>
+    </article>
 
     <footer>
-        <p>&copy; 2026 - Proyecto Tecnología. Todos los derechos reservados.</p>
+        <p><strong>Facultad de Ciencias de la Información</strong></p>
+        <p>Universidad Complutense de Madrid · Convocatoria 2026</p>
     </footer>
 
 </body>
