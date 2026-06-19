@@ -29,30 +29,21 @@
 
         .article-header { max-width: 850px; margin: 80px auto 40px auto; text-align: center; padding: 0 20px; }
         .kicker { font-size: 0.85rem; text-transform: uppercase; letter-spacing: 2px; color: var(--accent); font-weight: 700; margin-bottom: 15px; display: block; }
-        .article-header h1 { font-family: var(--font-serif); font-size: 3.2rem; line-height: 1.2; font-weight: 600; margin-bottom: 25px; color: #111; }
-        .lead { font-family: var(--font-serif); font-size: 1.3rem; color: var(--muted); line-height: 1.6; font-style: italic; }
-
-        .main-image { max-width: 1100px; margin: 40px auto; padding: 0 20px; }
-        .main-image img { width: 100%; height: 550px; object-fit: cover; box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
-        .caption { font-size: 0.85rem; color: var(--muted); margin-top: 12px; text-align: left; font-family: var(--font-serif); }
+        .article-header h1 { font-family: var(--font-serif); font-size: 2.8rem; line-height: 1.2; font-weight: 600; margin-bottom: 25px; color: #111; }
+        .lead { font-family: var(--font-serif); font-size: 1.4rem; color: var(--muted); line-height: 1.5; font-style: italic; max-width: 750px; margin: 0 auto; }
 
         .article-body { max-width: 720px; margin: 0 auto; padding: 0 20px; font-family: var(--font-serif); font-size: 1.25rem; color: #222; }
-        .article-body p { margin-bottom: 30px; text-align: justify; }
-        .article-body h2 { font-family: var(--font-sans); font-size: 1.4rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; color: var(--accent); margin: 50px 0 20px 0; }
-        
-        .article-body p.intro::first-letter { font-family: var(--font-serif); font-size: 4.5rem; float: left; margin-top: 6px; margin-right: 12px; line-height: 1; color: var(--accent); font-weight: 700; }
+        .article-body p { margin-bottom: 25px; text-align: justify; }
+        .article-body h2 { font-family: var(--font-sans); font-size: 1.5rem; font-weight: 700; color: #111; margin: 50px 0 20px 0; line-height: 1.3; }
 
-        .quote-card { background: #fff; border: 1px solid var(--border); border-left: 4px solid var(--accent); padding: 35px; margin: 45px 0; box-shadow: 0 5px 20px rgba(0,0,0,0.02); position: relative; }
-        .quote-card::before { content: "“"; font-family: var(--font-serif); font-size: 5rem; color: #f0d0cc; position: absolute; top: -10px; left: 20px; z-index: 1; opacity: 0.5; }
-        .quote-text { position: relative; z-index: 2; font-style: italic; margin-bottom: 15px !important; font-size: 1.25rem; color: #111; text-align: left !important; }
-        .quote-author { font-family: var(--font-sans); font-size: 0.9rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: var(--accent); }
+        .pullquote { border-left: 4px solid var(--accent); padding-left: 25px; margin: 40px 0; font-style: italic; font-size: 1.35rem; color: var(--accent); font-weight: 600; }
 
-        .inline-image { margin: 45px 0; }
-        .inline-image img { width: 100%; height: 380px; object-fit: cover; }
-
-        .cta-box { font-family: var(--font-sans); background: #f8fafc; border: 1px solid var(--border); border-left: 4px solid var(--accent); padding: 25px; margin: 40px 0; border-radius: 0 6px 6px 0; text-align: center; }
-        .cta-btn { display: inline-block; background: var(--accent); color: white; text-decoration: none; padding: 12px 24px; font-weight: 700; font-size: 0.95rem; border-radius: 4px; margin-top: 15px; text-transform: uppercase; letter-spacing: 0.5px; box-shadow: 0 4px 12px rgba(139, 30, 15, 0.15); transition: background 0.2s; }
-        .cta-btn:hover { background: #6b170b; }
+        .references-section { margin-top: 80px; padding-top: 40px; border-top: 1px solid var(--border); }
+        .references-section h3 { font-family: var(--font-sans); font-size: 1.1rem; text-transform: uppercase; letter-spacing: 1px; color: var(--text); margin-bottom: 20px; }
+        .references-list { list-style: none; font-family: var(--font-sans); font-size: 0.9rem; color: var(--muted); line-height: 1.6; }
+        .references-list li { margin-bottom: 15px; padding-left: 20px; text-indent: -20px; }
+        .references-list a { color: var(--accent); text-decoration: none; }
+        .references-list a:hover { text-decoration: underline; }
 
         footer { border-top: 1px solid var(--border); padding: 50px 20px; text-align: center; background: #fff; margin-top: 100px; font-size: 0.9rem; color: var(--muted); }
     </style>
@@ -72,48 +63,75 @@
     </nav>
 
     <header class="article-header">
-        <span class="kicker">Reportaje de Investigación</span>
-        <h1>¿Quién enseñará a escribir a los periodistas cuando las máquinas hagan las prácticas?</h1>
-        <p class="lead">El impacto fulminante de los modelos de lenguaje masivos en las aulas de comunicación y en el engranaje diario de las redacciones multimedia.</p>
+        <span class="kicker">Análisis Especial</span>
+        <h1>La automatización entra en las redacciones por la puerta de las tareas con las que siempre se aprendió el oficio</h1>
+        <p class="lead">¿Quién enseñará a escribir a los periodistas cuando las máquinas hagan las prácticas?</p>
     </header>
 
-    <div class="main-image">
-        <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=80&w=1200" alt="Inteligencia Artificial y Escritura">
-        <div class="caption">Los algoritmos de generación de lenguaje transforman radicalmente la velocidad y los procesos de producción editorial en los cibermedios modernos. Unsplash / Google DeepMind.</div>
-    </div>
-
     <main class="article-body">
-        <p class="intro">Las herramientas de generación automática de texto y análisis predictivo avanzan a pasos agigantados. En las facultades de Ciencias de la Información, el debate central ya no gira en torno a prohibir o restringir el uso de la tecnología, sino en descubrir de qué manera formar a los futuros profesionales para que aporten un valor añadido genuino que un algoritmo es incapaz de copiar en la pantalla.</p>
+        <p>La inteligencia artificial ya redacta teletipos, transcribe entrevistas y resume informes en segundos. Más de ocho de cada diez periodistas españoles ya la han usado. Y, sin apenas hacer ruido, ha empezado a quedarse con las tareas humildes que durante décadas sirvieron de escuela. La pregunta incómoda llega sola: si la máquina hace las prácticas, ¿dónde aprenderá el oficio quien viene detrás?</p>
 
-        <p>La inmediatez impuesta por la automatización obliga a un replanteamiento severo de las competencias que se exigen en el mercado laboral periodístico, un ecosistema donde las inteligencias artificiales asumen cada vez más tareas mecánicas.</p>
+        <p>Son las nueve de la mañana en una redacción cualquiera de Madrid y la primera noticia del día ya está casi escrita. No la ha tocado todavía ningún periodista: un programa de inteligencia artificial ha leído el comunicado que una empresa del Ibex envió de madrugada, ha ordenado las cifras y ha propuesto tres titulares a elegir. En unos minutos, alguien lo revisará, cambiará un par de cosas y le dará a publicar. Habrá despachado en un suspiro lo que hace tres años llevaba media hora larga. La escena, que sonaba a ciencia ficción no hace tanto, es hoy pura rutina. Y arrastra una pregunta que va mucho más allá de la tecnología: si la máquina se encarga del trabajo con el que siempre se empezaba en esta profesión, ¿qué le queda por aprender a quien acaba de llegar?</p>
 
-        <h2>El Cambio Estructural en la Docencia</h2>
-        <p>Los métodos de evaluación tradicionales están en jaque. La mítica redacción de noticias en el aula o la elaboración de crónicas basadas en teletipos de agencia ya no sirven para medir la destreza de un alumno si un modelo de lenguaje masivo puede resolver la tarea en menos de cinco segundos con una sintaxis perfecta.</p>
+        <p>La inteligencia artificial —esos sistemas capaces de generar texto, imágenes o voz imitando lo que haría una persona— ha dejado de ser una promesa para meterse de lleno en la rutina del periodismo. Y lo ha hecho tan deprisa que ha cogido a la profesión con el paso cambiado. Lo cuantifica el estudio <em>Inteligencia Artificial para periodistas: ¿enemiga o aliada?</em>, que la consultora Estudio de Comunicación elaboró junto a la Federación de Asociaciones de Periodistas de España, la operadora Lyntia y la agencia Servimedia, y que se presentó en mayo de 2025 sobre una muestra de 410 profesionales: el 83,7 % de los periodistas españoles en activo ya ha trabajado alguna vez con herramientas de IA. No es cosa de cuatro entusiastas; está, para bien y para mal, en casi todas las mesas de redacción del país.</p>
 
-        <div class="quote-card">
-            <p class="quote-text">"El verdadero pilar del futuro periodista seguirá siendo el criterio humano, la ética incorruptible y la capacidad de contrastar información sobre el terreno."</p>
-            <div class="quote-author">Pedro García-Alonso (UCM)</div>
+        <h2>Una herramienta que ahorra horas, no que firma noticias</h2>
+        <p>Conviene aclarar de qué hablamos exactamente, porque la etiqueta "IA" se ha gastado de tanto usarla. Salvo en casos contados, no estamos ante máquinas que escriben noticias solas y las publican sin que nadie las supervise. Estamos ante un ayudante incansable para lo más mecánico. Y los datos lo dibujan con nitidez: según el informe de la consultora Axicom, de octubre de 2025, un 56,3 % de los periodistas recurre a la IA para sugerir titulares, un 49,3 % como apoyo para estructurar el contenido y un 46,5 % para transcribir entrevistas y audios; el estudio de Estudio de Comunicación añade que más de la mitad, un 51,7 %, la usa para documentarse. En cambio, a la hora de la verdad, la confianza se desploma: solo un 11,3 % la emplea para verificar y apenas un 4,2 % se atreve a dejarle escribir una noticia entera por su cuenta.</p>
+
+        <div class="pullquote">
+            "La máquina carga con el trabajo bruto, pero decidir qué es noticia y cómo se cuenta sigue siendo terreno meramente humano."
         </div>
 
-        <p>Los expertos universitarios apuntan a que el esfuerzo docente debe mudarse hacia el desarrollo del pensamiento crítico, la verificación extrema de fuentes y el dominio de géneros complejos como el reportaje de investigación o la entrevista en profundidad, donde el factor empático y el contacto directo cara a cara marcan una barrera insalvable para las máquinas.</p>
+        <p>El retrato es revelador. La máquina carga con el trabajo bruto, pero decidir qué es noticia y cómo se cuenta sigue siendo terreno humano. Y todo esto sucede, además, sin que las empresas hayan puesto orden: el mismo estudio de Estudio de Comunicación señala que el 89 % de los periodistas trabaja en medios que no tienen ni un departamento dedicado a la IA ni formación específica para usarla. Dicho de otro modo, la revolución se está colando por la puerta de atrás, callada y autodidacta: cada redactor se las apaña con ChatGPT, Gemini o Copilot a su manera, sin nadie que le enseñe y sin un manual sobre la mesa.</p>
 
-        <h2>La Perspectiva de la Trinchera Profesional</h2>
-        <p>En el plano profesional, la automatización ya no es ciencia ficción sino una realidad integrada en los sistemas de gestión de contenidos (CMS) de los principales grupos de comunicación. Las cabeceras más importantes utilizan algoritmos predictivos para indexar enlaces de contenido relacionado, transcribir declaraciones de ruedas de prensa en tiempo real e incluso redactar resúmenes financieros automáticos.</p>
+        <p>Esa es, exactamente, la sensación que se vive dentro de las redacciones. Marcos Rodríguez, redactor del suplemento de economía Activos de El Periódico —del grupo Prensa Ibérica— y especializado en empleo, mercados y nuevas tecnologías, lleva tiempo conviviendo con estas herramientas en su jornada. Que un periodista de economía y tecnología la haya adoptado sin dramatismo no es casualidad. Es precisamente en las secciones cargadas de datos, cifras e informes kilométricos —economía, mercados, tribunales— donde estas herramientas brillan, capaces de desbrozar en minutos una documentación que antes devoraba una tarde entera. Y ese tiempo rescatado puede dedicarse, sobre el papel, a lo que de verdad distingue a un periodista: levantar el teléfono, contrastar, pisar la calle.</p>
 
-        <p>Los redactores en activo coinciden en que la inteligencia artificial se ha convertido en un asistente de productividad inestimable para jerarquizar informes densos y optimizar tiempos, pero lanzan una advertencia rotunda: las alucinaciones de los datos y la falta de responsabilidad ética convierten la supervisión humana en una línea roja infranqueable.</p>
+        <h2>El peligro no es quién escribe hoy, sino quién aprenderá mañana</h2>
+        <p>Y aquí asoma la grieta de fondo. Durante generaciones, este oficio se ha aprendido empezando por lo más bajo: redactando breves, pasando teletipos a limpio, transcribiendo ruedas de prensa interminables, cubriendo la noticia menor que nadie quería firmar. Tareas ingratas, sí, pero que enseñaban lo esencial: a escribir rápido, a jerarquizar, a separar el grano de la paja. Eran el gimnasio del periodista. Y son, casualmente, las mismas que la inteligencia artificial ejecuta hoy mejor y más rápido que cualquier recién llegado.</p>
 
-        <div class="inline-image">
-            <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?q=80&w=800" alt="Código y Datos">
-            <div class="caption">La analítica de datos en el periodismo moderno exige una rigurosa supervisión humana para evitar errores de bulto y mantener la credibilidad de la firma.</div>
-        </div>
+        <p>El peligro es evidente: si esas tareas desaparecen como escuela, se rompe la escalera por la que un estudiante se convertía en profesional. El informe de Estudio de Comunicación deja, además, un dato que invita a pensar: la IA se usa casi por igual entre los menores de 30 años (91,1 %) y entre quienes tienen de 30 a 50 (91,7 %), pero baja al 75 % entre los mayores de 50. O sea, no son los más jóvenes quienes más la utilizan, sino también —y con la misma intensidad— los periodistas en plena madurez. El tópico de que esto va de "chavales y pantallas" se cae solo, y obliga a mirar el cambio de otra forma: no es un relevo generacional, es un terremoto estructural que sacude a toda la redacción a la vez. Quien ha recorrido el oficio entero, de abajo arriba, lo capta enseguida. Rodríguez, que se curtió en el digital Vozpópuli antes de dar el salto a Prensa Ibérica, tiene una idea bastante clara de lo que les espera a los que ahora empujan por entrar.</p>
 
-        <p>El valor de la firma periodística en la era de los contenidos infinitos no mengua; al contrario, se cotiza más alta que nunca. Frente al ruido generado por millones de textos clónicos producidos en serie por ordenadores, la rúbrica de un profesional que aporta contexto, calle y contraste riguroso se convierte en el único salvavidas reputacional para los cibermedios.</p>
+        <p>Ahora bien, ¿es esto un cambio más, como lo fueron internet o las redes sociales en su día, o estamos ante algo distinto de raíz? Para responderlo conviene salir de la redacción y tomar algo de distancia. Pedro García-Alonso Montoya, profesor titular en el Departamento de Periodismo y Comunicación Global de la Facultad de Ciencias de la Información de la Universidad Complutense de Madrid e investigador del grupo GIAIP-UCM —dedicado a estudiar internet y periodismo—, lleva años observando cómo la tecnología digital rehace la profesión por dentro.</p>
 
-        <div class="cta-box">
-            <h3>Conoce los testimonios de primera mano</h3>
-            <p style="margin: 10px 0 0 0; font-size: 1.1rem; font-family: var(--font-sans); color: var(--muted);">Hemos entrevistado en profundidad al sector académico y profesional para analizar este fenómeno.</p>
-            <a href="entrevistas.html" class="cta-btn">Leer Entrevistas Completas</a>
-        </div>
+        <h2>Detrás de la herramienta hay un negocio de millones de euros</h2>
+        <p>Porque la inteligencia artificial no ha aterrizado en el periodismo por arte de magia. La empujan las grandes tecnológicas —OpenAI, Google, Meta—, empresas hambrientas de toneladas de texto bien escrito y verificado para entrenar a sus modelos. ¿Y quién atesora archivos con décadas de información contrastada? Los medios. De esa necesidad mutua ha brotado un mercado nuevo y multimillonario.</p>
+
+        <p>En España, el caso más sonado es el del Grupo Prisa, editor de <em>El País, Cinco Días, AS</em> y <em>HuffPost</em>. El 13 de marzo de 2024 firmó un acuerdo con OpenAI —la creadora de ChatGPT— para que sus modelos se entrenaran con los contenidos de las cabeceras y, a cambio, los usuarios de ChatGPT vieran resúmenes de la actualidad con enlaces que devuelven el tráfico al medio. El pacto incluía, además, desarrollar herramientas internas como VerificAudio, un sistema de la Cadena SER para cazar audios falsos generados con IA. Dos años más tarde, el 16 de marzo de 2026, Prisa cerró otro acuerdo, esta vez con Meta, para nutrir su asistente Meta AI con información en tiempo real para toda Europa, en una jugada a la que también se sumaron News Corp, Le Figaro o Süddeutsche Zeitung.</p>
+
+        <p>Las cifras de estos acuerdos se guardan con celo, pero hay pistas del volumen que mueve el mercado: una investigación de <em>The Information</em>, de enero de 2024, destapó que OpenAI llegó a ofrecer a los editores entre uno y cinco millones de dólares al año por abrir sus archivos. Para unos medios golpeados por el desplome de la publicidad, ese dinero es oxígeno puro. Pero también ata a las redacciones a las mismas plataformas que, como periodistas, deberían vigilar de cerca. Y hay un efecto colateral que ya escuece en las cuentas: las búsquedas conversacionales que responden directamente al usuario, sin que pinche en la noticia, están secando el tráfico hacia las webs de los medios, su principal grifo de ingresos publicitarios.</p>
+
+        <p>La proyección de fondo no invita al optimismo. El informe <em>Journalism, Media, and Technology Trends and Predictions 2026</em>, que Nic Newman firmó para el Reuters Institute de la Universidad de Oxford y publicó en enero de 2026 a partir de una encuesta a 280 directivos de medios de 51 países, calcula que los editores temen perder entre un 40 % y un 43 % del tráfico que les llega desde los buscadores en apenas tres años, conforme se imponen las búsquedas de "cero clics" que resuelve la IA. Y deja una paradoja que escuece: aunque el 44 % de las redacciones ve "prometedores" sus propios proyectos de IA, un 67 % admite que, por ahora, automatizar no le ha permitido ni recortar plantilla ni ahorrar un euro. Más máquinas, los mismos gastos.</p>
+
+        <h2>La trampa de las "alucinaciones" y el valor de la firma</h2>
+        <p>Si todo se redujera a ganar tiempo, el debate sería sencillo. Pero la IA arrastra un riesgo que en periodismo resulta especialmente venenoso: las llamadas "alucinaciones", esos momentos en que el sistema se inventa un dato, una cita o un hecho y lo suelta con un aplomo absoluto, como si fuera verdad incontestable. Una cita falsa puesta en boca de una persona real puede pulverizar en una tarde la credibilidad que un medio tardó décadas en amasar. Y no es un miedo teórico.</p>
+
+        <p>El 19 de febrero de 2025, la Asociación de la Prensa de Madrid lanzó un comunicado —titulado <em>La APM denuncia la utilización, como si fueran auténticas, de imágenes creadas por inteligencia artificial</em>— que la FAPE respaldó ese mismo día. Denunciaba que varios medios habían publicado imágenes falsas como si fueran reales: montajes del papa Francisco y de la cantante Shakira ingresados en un hospital, de Julio Iglesias firmando su testamento o de Elon Musk paseando del brazo de Michelle Obama. La APM señalaba un mecanismo tramposo: aunque la pieza original avisara en el pie de foto de que la imagen estaba hecha con IA, los buscadores y las redes la reproducían luego sin ese contexto, y el resultado circulaba como una fotografía auténtica. Desinformación, con el algoritmo apretando el gatillo.</p>
+
+        <p>El gremio no se quedó en la queja. Pocas semanas después, el 5 de abril de 2025, la asamblea general extraordinaria de la FAPE aprobó una reforma a fondo de su Código Deontológico, la norma que rige la ética de más de 17.000 periodistas asociados. Una de las claves: el texto deja escrito que usar IA no libra al periodista de las viejas exigencias de veracidad, rigor y contraste, y que avisar al pie de que algo se ha generado con IA no convierte en publicable lo que no lo es. La supervisión humana, recalca, sigue siendo obligatoria. La ética no se delega en una máquina.</p>
+
+        <p>Y, paradójicamente, en medio de tanto ruido el sello humano puede salir reforzado. Cuando cualquiera fabrica un texto verosímil con dos instrucciones, lo escaso —y por tanto lo valioso— pasa a ser la garantía de que detrás hay un periodista de carne y hueso que pone su nombre y responde de lo que cuenta. Y esa intuición conecta con lo que sienten los propios lectores. El estudio <em>Encuesta estatal sobre la percepción y credibilidad de la Inteligencia Artificial (IA) en los procesos de producción de los medios de comunicación</em>, dirigido por Marcel Mauri y Ruth Rodríguez-Martínez desde el grupo POLCOM-GRP de la Universitat Pompeu Fabra y publicado el 15 de septiembre de 2025 a partir de una encuesta de YouGov a 2.004 personas, destapa una contradicción muy humana. Por un lado, el 80 % de los españoles exige que los medios avisen cuando han usado IA. Por otro, la confianza sigue cayendo del lado humano: un 56 % se fía más de la información verificada por un periodista, frente a un 30 % que confía en la validada solo por una máquina. El factor humano, lejos de estorbar, se ha vuelto el principal sello de garantía.</p>
+
+        <h2>Un oficio que cambia, no que desaparece</h2>
+        <p>La conclusión que va tomando forma no es la del apocalipsis que algunos agitaban, pero tampoco la de la calma chicha. Los grandes medios españoles ya mueven ficha para no quedarse fuera. El País lanzó el 26 de marzo de 2025 <em>Vera EL PAÍS</em>, un asistente conversacional con tecnología de OpenAI, reservado a suscriptores de pago, que solo responde a partir del archivo del propio diario: así esquiva el riesgo de alucinaciones, aunque sea a costa de cerrar el grifo. Y la consultora Kreab, en su informe <em>Surfeando la ola de la IA</em>, publicado el 11 de febrero de 2026, sentencia que las cabeceras con trayectoria sólida saldrán reforzadas justo en un entorno saturado de contenido sintético: en la era del ruido automático, el rigor humano se cotiza al alza.</p>
+
+        <p>Queda, eso sí, la pregunta del principio sin cerrar del todo: la del relevo. Y quizá la mejor forma de terminar sea con un mensaje para los que vienen empujando detrás, los que ahora mismo acaban la carrera con el miedo agarrado al estómago. Porque, al final, la inteligencia artificial podrá escupir el primer teletipo de la mañana. Pero alguien tendrá que decidir si esa noticia importa, telefonear a quien no quiere coger el teléfono y firmar con su nombre lo que cuenta. Ese alguien, de momento, sigue siendo de carne y hueso. Y todo apunta a que tendrá que seguir aprendiendo el oficio, aunque ya no sea pasando teletipos a limpio.</p>
+
+        <!-- SECCIÓN DE REFERENCIAS BIBLIOGRÁFICAS -->
+        <section class="references-section">
+            <h3>Referencias bibliográficas</h3>
+            <ul class="references-list">
+                <li>Asociación de la Prensa de Madrid. (2025, 19 de febrero). <em>La APM denuncia la utilización, como si fueran auténticas, de imágenes creadas por inteligencia artificial</em>.</li>
+                <li>Axicom. (2025, octubre). <em>El 74 % de los periodistas ya usa inteligencia artificial, pero exige mantener el control editorial</em>.</li>
+                <li>El País. (2025, 26 de marzo). <em>EL PAÍS lanza Vera EL PAÍS, un asistente conversacional con inteligencia artificial</em>.</li>
+                <li>Estudio de Comunicación, Federación de Asociaciones de Periodistas de España, Lyntia & Servimedia. (2025). <em>Inteligencia Artificial para periodistas: ¿enemiga o aliada?</em></li>
+                <li>Federación de Asociaciones de Periodistas de España. (2025, 5 de abril). <em>Código deontológico</em>.</li>
+                <li>Mauri, M. & Rodríguez-Martínez, R. (2025). <em>Encuesta estatal sobre la percepción y credibilidad de la Inteligencia Artificial (IA) en los procesos de producción de los medios de comunicación</em>. POLCOM-GRP, Universitat Pompeu Fabra.</li>
+                <li>Newman, N. (2026). <em>Journalism, media, and technology trends and predictions 2026</em>. Reuters Institute for the Study of Journalism.</li>
+                <li>El País. (2024, 13 de marzo). <em>OpenAI anuncia un acuerdo con Prisa Media y Le Monde</em>.</li>
+                <li>El País. (2026, 16 de marzo). <em>Meta se alía con Prisa para ampliar las noticias y el contenido en su asistente de IA</em>.</li>
+                <li>Kreab España. (2026, 11 de febrero). <em>Surfeando la ola de la IA: el informe de medios 2026 de Kreab</em>.</li>
+            </ul>
+        </section>
     </main>
 
     <footer>
