@@ -39,6 +39,13 @@
         .resources-list li { font-family: var(--font-sans); font-size: 1rem; color: #334155; padding: 12px 15px; background: #f8fafc; border: 1px solid var(--border); margin-bottom: 10px; border-radius: 4px; display: flex; align-items: center; gap: 10px; }
         .resources-list li::before { content: "✓"; color: var(--accent); font-weight: bold; }
 
+        /* ESTILOS DE TU PERFIL */
+        .author-profile { margin-top: 70px; padding-top: 40px; border-top: 2px dashed var(--border); text-align: center; }
+        .author-avatar { width: 140px; height: 140px; border-radius: 50%; object-fit: cover; margin-bottom: 15px; border: 1px solid var(--border); box-shadow: 0 4px 12px rgba(0,0,0,0.06); }
+        .author-name { font-family: var(--font-serif); font-size: 1.6rem; font-weight: 600; color: #111; margin-bottom: 5px; }
+        .author-title { font-family: var(--font-sans); font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; color: var(--accent); font-weight: 700; margin-bottom: 15px; }
+        .author-bio { font-family: var(--font-serif); font-size: 1.15rem; color: var(--muted); max-width: 620px; margin: 0 auto; text-align: center !important; line-height: 1.6; }
+
         footer { border-top: 1px solid var(--border); padding: 50px 20px; text-align: center; background: #fff; margin-top: 100px; font-size: 0.9rem; color: var(--muted); }
     </style>
 </head>
@@ -76,6 +83,14 @@
             <li><strong>Imágenes Conceptuales:</strong> Fotografías de alta calidad tomadas de Unsplash y Google DeepMind mediante enlaces optimizados.</li>
             <li><strong>Vídeo Incrustado:</strong> Integración directa del reproductor de YouTube (`<iframe>`) para visualizar la entrevista audiovisual complementaria en alta definición.</li>
         </ul>
+
+        <!-- APARTADO DE TU PERFIL DE AUTOR -->
+        <section class="author-profile">
+            <img src="fotocv7777.JPG" alt="Autor del proyecto" class="author-avatar">
+            <h3 class="author-name">Juan Camilo</h3>
+            <div class="author-title">Autor del Proyecto Especial</div>
+            <p class="author-bio">Estudiante de cuarto año de Periodismo en la Universidad Complutense de Madrid y actualmente redactor en la sección de Empresas de <em>ElEconomista</em>. Apasionado del periodismo vocacional, de calle y de verdad, enfocado en el rigor informativo frente a los retos de la era digital.</p>
+        </section>
     </main>
 
     <footer>
