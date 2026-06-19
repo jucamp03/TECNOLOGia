@@ -3,47 +3,110 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reportaje - Especial IA</title>
+    <title>Reportaje — Especial IA</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Lora:ital,wght@0,400;0,600;1,400&family=Plus+Jakarta+Sans:wght@400;500;700&display=swap" rel="stylesheet">
     <style>
-        * { box-sizing: border-box; }
-        body { font-family: Arial, sans-serif; line-height: 1.6; margin: 0; padding: 0; background-color: #f4f4f9; color: #333; }
-        header { background: #1e293b; color: #fff; padding: 30px 20px; text-align: center; }
-        nav { background: #334155; padding: 15px; text-align: center; }
-        nav a { color: white; margin: 0 15px; text-transform: uppercase; font-weight: bold; text-decoration: none; font-size: 14px; }
-        nav a:hover { color: #38bdf8; }
-        .container { max-width: 1000px; margin: 20px auto; padding: 20px; background: #fff; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
-        footer { text-align: center; padding: 25px; background: #1e293b; color: white; margin-top: 40px; }
-        .entrevista-box { background: #f8fafc; border-left: 4px solid #38bdf8; padding: 15px; margin: 20px 0; }
+        :root {
+            --bg: #fdfdfb;
+            --text: #1a1a1a;
+            --muted: #5a5a5a;
+            --accent: #8b1e0f;
+            --border: #eaeaea;
+            --font-title: 'Cinzel', serif;
+            --font-serif: 'Lora', Georgia, serif;
+            --font-sans: 'Plus Jakarta Sans', sans-serif;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { background-color: var(--bg); color: var(--text); font-family: var(--font-sans); line-height: 1.8; }
+        
+        .site-nav { position: sticky; top: 0; background: rgba(253, 253, 251, 0.98); border-bottom: 1px solid var(--border); z-index: 1000; padding: 15px 20px; backdrop-filter: blur(8px); }
+        .nav-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+        .nav-logo { font-family: var(--font-title); font-weight: 700; font-size: 1.3rem; text-decoration: none; color: var(--text); }
+        .nav-links { display: flex; list-style: none; gap: 30px; }
+        .nav-links a { text-decoration: none; color: var(--muted); font-size: 0.9rem; font-weight: 500; text-transform: uppercase; }
+        .nav-links a:hover { color: var(--accent); }
+
+        .article-header { max-width: 850px; margin: 80px auto 40px auto; text-align: center; padding: 0 20px; }
+        .kicker { font-size: 0.85rem; text-transform: uppercase; letter-spacing: 2px; color: var(--accent); font-weight: 700; margin-bottom: 15px; display: block; }
+        .article-header h1 { font-family: var(--font-serif); font-size: 3.2rem; line-height: 1.2; font-weight: 600; margin-bottom: 25px; color: #111; }
+        .lead { font-family: var(--font-serif); font-size: 1.3rem; color: var(--muted); line-height: 1.6; font-style: italic; }
+
+        .main-image { max-width: 1100px; margin: 40px auto; padding: 0 20px; }
+        .main-image img { width: 100%; height: 550px; object-fit: cover; box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
+        .caption { font-size: 0.85rem; color: var(--muted); margin-top: 12px; text-align: left; font-family: var(--font-serif); }
+
+        .article-body { max-width: 700px; margin: 0 auto; padding: 0 20px; font-family: var(--font-serif); font-size: 1.25rem; color: #222; }
+        .article-body p { margin-bottom: 30px; text-align: justify; }
+        
+        /* Letra capitular */
+        .article-body p:first-of-type::first-letter { font-family: var(--font-title); font-size: 4.2rem; float: left; margin-top: 8px; margin-right: 10px; line-height: 1; color: var(--accent); font-weight: 700; }
+
+        /* Cajas de entrevistas espectaculares */
+        .quote-card { background: #fff; border: 1px solid var(--border); border-left: 4px solid var(--accent); padding: 35px; margin: 45px 0; box-shadow: 0 5px 20px rgba(0,0,0,0.02); position: relative; }
+        .quote-card::before { content: "“"; font-family: var(--font-title); font-size: 5rem; color: #f0d0cc; position: absolute; top: -10px; left: 20px; z-index: 1; opacity: 0.5; }
+        .quote-text { position: relative; z-index: 2; font-style: italic; margin-bottom: 15px !important; font-size: 1.25rem; color: #111; }
+        .quote-author { font-family: var(--font-sans); font-size: 0.9rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: var(--accent); }
+
+        .inline-image { margin: 45px 0; }
+        .inline-image img { width: 100%; height: 380px; object-fit: cover; }
+
+        footer { border-top: 1px solid var(--border); padding: 50px 20px; text-align: center; background: #fff; margin-top: 100px; font-size: 0.9rem; color: var(--muted); }
     </style>
 </head>
 <body>
 
-    <header>
-        <h1>REPORTAJE CENTRAL</h1>
-        <p>¿Quién enseñará a escribir a los periodistas cuando las máquinas hagan las prácticas?</p>
-    </header>
-
-    <nav>
-        <a href="index.html">Inicio</a>
-        <a href="justificacion.html">Justificación</a>
-        <a href="reportaje.html">Reportaje</a>
+    <nav class="site-nav">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">TECNOLOGia</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="reportaje.html">Reportaje</a></li>
+                <li><a href="justificacion.html">Justificación</a></li>
+            </ul>
+        </div>
     </nav>
 
-    <div class="container">
-        <h2>El impacto de la Inteligencia Artificial en las aulas de Periodismo</h2>
-        <p>Las herramientas de generación de texto y análisis de datos avanzan a un ritmo vertiginoso. En las facultades de comunicación, el debate ya no es si se debe usar la tecnología, sino cómo formar a los futuros periodistas para que aporten un valor diferencial que los algoritmos no pueden replicar.</p>
-        
-        <div class="entrevista-box">
-            <h3>Entrevista con Expertos</h3>
-            <p><strong>Pedro García-Alonso (Profesor UCM):</strong> Investiga cómo los modelos masivos de lenguaje impactan la formación global en la universidad y defiende que el criterio humano sigue siendo el pilar fundamental.</p>
-            <p><strong>Marcos Rodríguez (Redactor en Activos - El Periódico):</strong> Explica el uso cotidiano de la inteligencia artificial y las alertas automatizadas en los flujos de información económica real.</p>
-        </div>
+    <header class="article-header">
+        <span class="kicker">Reportaje de Investigación</span>
+        <h1>¿Quién enseñará a escribir a los periodistas cuando las máquinas hagan las prácticas?</h1>
+        <p class="lead">El impacto fulminante de los modelos de lenguaje masivos en las aulas de comunicación y en el engranaje diario de las redacciones multimedia.</p>
+    </header>
 
-        <p>El verdadero desafío radica en mantener la ética, la mirada crítica de campo y la verificación minuciosa en un entorno donde generar un artículo coherente solo toma un par de segundos.</p>
+    <div class="main-image">
+        <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=80&w=1200" alt="Inteligencia Artificial y Escritura">
+        <div class="caption">Los algoritmos de generación de lenguaje transforman radicalmente la velocidad y los procesos de producción editorial en los cibermedios modernos. Unsplash / Google DeepMind.</div>
     </div>
 
+    <main class="article-body">
+        <p>Las herramientas de generación automática de texto y análisis predictivo avanzan a pasos agigantados. En las facultades de Ciencias de la Información, el debate central ya no gira en torno a prohibir o restringir el uso de la tecnología, sino en descubrir de qué manera formar a los futuros profesionales para que aporten un valor añadido genuino que un algoritmo es incapaz de replicar en la pantalla.</p>
+
+        <p>La inmediatez impuesta por la automatización obliga a un replanteamiento severo de las competencias que se exigen en el mercado laboral periodístico.</p>
+
+        <div class="quote-card">
+            <p class="quote-text">"Investigo la repercusión de los modelos masivos de lenguaje en la docencia global de las universidades españolas. El verdadero pilar del futuro periodista seguirá siendo el criterio humano, la ética incorruptible y la capacidad de contrastar información sobre el terreno."</p>
+            <div class="quote-author">Pedro García-Alonso — Profesor e Investigador en la UCM</div>
+        </div>
+
+        <p>Por otro lado, la implantación de la Inteligencia Artificial no es una teoría de laboratorio académico, sino un protocolo activo que agiliza y optimiza los flujos informativos de los diarios especializados más influyentes del país.</p>
+
+        <div class="inline-image">
+            <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?q=80&w=800" alt="Código y Datos">
+            <div class="caption">La analítica de datos a gran escala permite a los periodistas económicos detectar tendencias financieras antes de que se hagan públicas de forma oficial.</div>
+        </div>
+
+        <div class="quote-card">
+            <p class="quote-text">"En el día a día de Activos de El Periódico, la inteligencia artificial nos sirve como un aliado estratégico a través de alertas automatizadas de flujos financieros e información macroeconómica. Esto nos libera de tareas mecánicas para dedicarnos en exclusiva al análisis y la investigación de historias."</p>
+            <div class="quote-author">Marcos Rodríguez — Redactor en Activos (El Periódico)</div>
+        </div>
+
+        <p>El desafío final radica de manera unánime en salvaguardar el rigor periodístico, la mirada analítica fina y la fiscalización del poder dentro de un ecosistema digital saturado donde generar una pieza informativa perfectamente coherente tan solo requiere un par de segundos de computación automatizada.</p>
+    </main>
+
     <footer>
-        <p>&copy; 2026 - Proyecto Tecnología. Todos los derechos reservados.</p>
+        <p><strong>Facultad de Ciencias de la Información</strong></p>
+        <p>Universidad Complutense de Madrid · Trabajo Evaluatorio</p>
     </footer>
 
 </body>
