@@ -3,123 +3,91 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>El periodista del futuro — Especial IA</title>
+    <title>Especial Inteligencia Artificial — Inicio</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Lora:ital,wght@0,400;0,600;1,400&family=Plus+Jakarta+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Plus+Jakarta+Sans:wght@400;500;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --bg: #faf9f6;
-            --text: #111111;
-            --muted: #555555;
+            --bg: #fdfdfb;
+            --text: #1a1a1a;
+            --muted: #5a5a5a;
             --accent: #8b1e0f;
-            --border: #e2e2e2;
-            --font-title: 'Cinzel', serif;
+            --border: #eaeaea;
             --font-serif: 'Lora', Georgia, serif;
             --font-sans: 'Plus Jakarta Sans', sans-serif;
         }
         * { box-sizing: border-box; margin: 0; padding: 0; }
-        body { background-color: var(--bg); color: var(--text); font-family: var(--font-sans); line-height: 1.7; }
+        body { background-color: var(--bg); color: var(--text); font-family: var(--font-sans); line-height: 1.8; }
         
-        /* Navegación Fija */
-        .site-nav { position: sticky; top: 0; background: rgba(250, 249, 246, 0.98); border-bottom: 1px solid var(--border); z-index: 1000; padding: 15px 20px; backdrop-filter: blur(8px); }
+        .site-nav { position: sticky; top: 0; background: rgba(253, 253, 251, 0.98); border-bottom: 1px solid var(--border); z-index: 1000; padding: 15px 20px; backdrop-filter: blur(8px); }
         .nav-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
-        .nav-logo { font-family: var(--font-title); font-weight: 700; font-size: 1.3rem; text-decoration: none; color: var(--text); letter-spacing: 1px; }
+        .nav-logo { font-family: var(--font-serif); font-weight: 700; font-size: 1.3rem; text-decoration: none; color: var(--text); letter-spacing: 0.5px; }
         .nav-links { display: flex; list-style: none; gap: 30px; }
-        .nav-links a { text-decoration: none; color: var(--muted); font-size: 0.9rem; font-weight: 500; text-transform: uppercase; letter-spacing: 0.5px; transition: color 0.3s; }
+        .nav-links a { text-decoration: none; color: var(--muted); font-size: 0.9rem; font-weight: 500; text-transform: uppercase; }
         .nav-links a:hover { color: var(--accent); }
 
-        /* Hero Header */
-        .hero { position: relative; background: #000; height: 60vh; display: flex; align-items: center; justify-content: center; overflow: hidden; text-align: center; color: #fff; }
-        .hero img { position: absolute; width: 100%; height: 100%; object-fit: cover; opacity: 0.4; }
-        .hero-content { position: relative; z-index: 10; max-width: 800px; padding: 0 20px; }
-        .hero-tag { font-size: 0.9rem; text-transform: uppercase; letter-spacing: 3px; color: #dfa8a1; font-weight: 700; margin-bottom: 15px; }
-        .hero h1 { font-family: var(--font-title); font-size: 3.5rem; line-height: 1.2; margin-bottom: 20px; font-weight: 700; }
-        .hero p { font-family: var(--font-serif); font-size: 1.3rem; opacity: 0.9; font-style: italic; max-width: 650px; margin: 0 auto; }
+        .hero { max-width: 900px; margin: 100px auto 60px auto; text-align: center; padding: 0 20px; }
+        .hero h1 { font-family: var(--font-serif); font-size: 3.5rem; line-height: 1.2; font-weight: 600; color: #111; margin-bottom: 25px; }
+        .hero p { font-size: 1.2rem; color: var(--muted); max-width: 700px; margin: 0 auto 40px auto; }
 
-        /* Autor */
-        .author-section { max-width: 800px; margin: 50px auto 20px auto; padding: 0 20px; text-align: center; }
-        .author-box { display: inline-flex; align-items: center; gap: 15px; background: #fff; border: 1px solid var(--border); padding: 12px 25px; border-radius: 50px; box-shadow: 0 2px 10px rgba(0,0,0,0.02); }
-        .author-avatar { width: 45px; height: 45px; background: var(--accent); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.1rem; }
-        .author-info { text-align: left; font-size: 0.9rem; }
-        .author-info strong { color: var(--text); }
+        .cta-btn { display: inline-block; background: var(--accent); color: white; text-decoration: none; padding: 15px 32px; font-weight: 700; font-size: 1rem; border-radius: 4px; text-transform: uppercase; letter-spacing: 0.5px; box-shadow: 0 4px 15px rgba(139, 30, 15, 0.2); transition: background 0.2s, transform 0.2s; }
+        .cta-btn:hover { background: #6b170b; transform: translateY(-2px); }
 
-        /* Grid de Artículos */
-        .main-grid { max-width: 1200px; margin: 40px auto 80px auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(450px, 1fr)); gap: 40px; padding: 0 20px; }
-        .card { background: #fff; border: 1px solid var(--border); display: flex; flex-direction: column; text-decoration: none; color: var(--text); overflow: hidden; transition: transform 0.3s, border-color 0.3s; box-shadow: 0 4px 15px rgba(0,0,0,0.02); }
-        .card:hover { transform: translateY(-5px); border-color: var(--accent); }
-        .card-img { height: 250px; overflow: hidden; position: relative; }
-        .card-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s; }
-        .card:hover .card-img img { transform: scale(1.05); }
-        .card-content { padding: 35px; flex-grow: 1; display: flex; flex-direction: column; }
-        .card-tag { font-size: 0.8rem; text-transform: uppercase; color: var(--accent); font-weight: 700; letter-spacing: 1px; margin-bottom: 12px; }
-        .card h3 { font-family: var(--font-serif); font-size: 1.8rem; margin-bottom: 15px; line-height: 1.3; font-weight: 600; }
-        .card p { color: var(--muted); font-size: 1rem; line-height: 1.6; }
+        .features-grid { max-width: 1100px; margin: 80px auto; display: grid; grid-template-columns: repeat(3, 1100px); gap: 30px; display: flex; justify-content: center; padding: 0 20px; flex-wrap: wrap; }
+        .card { background: white; border: 1px solid var(--border); padding: 30px; border-radius: 6px; width: 320px; box-shadow: 0 4px 12px rgba(0,0,0,0.01); text-align: left; }
+        .card h3 { font-family: var(--font-serif); font-size: 1.4rem; margin-bottom: 15px; color: #111; }
+        .card p { color: var(--muted); font-size: 0.95rem; margin-bottom: 20px; }
+        .card a { color: var(--accent); text-decoration: none; font-weight: 700; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.5px; }
+        .card a:hover { text-decoration: underline; }
 
-        /* Footer */
-        footer { border-top: 1px solid var(--border); padding: 50px 20px; text-align: center; background: #fff; font-size: 0.9rem; color: var(--muted); }
-        footer strong { color: var(--text); }
+        footer { border-top: 1px solid var(--border); padding: 50px 20px; text-align: center; background: #fff; margin-top: 120px; font-size: 0.9rem; color: var(--muted); }
     </style>
 </head>
 <body>
 
+    <!-- MENÚ CON LAS 4 PESTAÑAS CORRECTAS -->
     <nav class="site-nav">
         <div class="nav-container">
             <a href="index.html" class="nav-logo">TECNOLOGia</a>
             <ul class="nav-links">
                 <li><a href="index.html">Inicio</a></li>
                 <li><a href="reportaje.html">Reportaje</a></li>
+                <li><a href="entrevistas.html">Entrevistas</a></li>
                 <li><a href="justificacion.html">Justificación</a></li>
             </ul>
         </div>
     </nav>
 
     <header class="hero">
-        <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=1600" alt="Inteligencia Artificial Fondo">
-        <div class="hero-content">
-            <span class="hero-tag">Especial Multimedia</span>
-            <h1>El periodista del futuro</h1>
-            <p>Algoritmos, redacciones automatizadas y dilemas éticos: cómo la inteligencia artificial está reescribiendo las normas del oficio informativo.</p>
-        </div>
+        <h1>El Algoritmo en la Redacción</h1>
+        <p>Un análisis en profundidad sobre el impacto de la Inteligencia Artificial generativa dentro de las aulas universitarias y el ejercicio del periodismo actual.</p>
+        <a href="reportaje.html" class="cta-btn">Comenzar Lectura</a>
     </header>
 
-    <section class="author-section">
-        <div class="author-box">
-            <div class="author-avatar">UCM</div>
-            <div class="author-info">
-                <span>Por <strong>[Tu Nombre y Apellidos]</strong></span><br>
-                <span style="color: var(--muted); font-size: 0.8rem;">Información Periodística Especializada · 2026</span>
-            </div>
+    <section class="features-grid">
+        <div class="card">
+            <h3>El Reportaje</h3>
+            <p>Descubre cómo los modelos de lenguaje masivos están forzando una reestructuración de las competencias tradicionales en los medios digitales.</p>
+            <a href="reportaje.html">Ir al reportaje →</a>
+        </div>
+
+        <div class="card">
+            <h3>Las Entrevistas</h3>
+            <p>Conversamos con el docente Pedro García-Alonso (UCM) y el redactor de economía Marcos Rodríguez (El Periódico) sobre el futuro del oficio.</p>
+            <a href="entrevistas.html">Ver entrevistas →</a>
+        </div>
+
+        <div class="card">
+            <h3>Justificación</h3>
+            <p>Consulta los criterios editoriales, objetivos académicos y la documentación de recursos multimedia empleados en este proyecto especial.</p>
+            <a href="justificacion.html">Ver criterios →</a>
         </div>
     </section>
 
-    <main class="main-grid">
-        <a href="reportaje.html" class="card">
-            <div class="card-img">
-                <img src="https://images.unsplash.com/photo-1504711434969-e33886168f5c?q=80&w=800" alt="Periodismo Redacción">
-            </div>
-            <div class="card-content">
-                <span class="card-tag">Reportaje Central</span>
-                <h3>¿Quién enseñará a escribir a los periodistas cuando las máquinas hagan las prácticas?</h3>
-                <p>Un análisis en profundidad sobre la inserción de modelos masivos de lenguaje en los flujos de trabajo de los medios y entrevistas exclusivas con profesionales y académicos.</p>
-            </div>
-        </a>
-
-        <a href="justificacion.html" class="card">
-            <div class="card-img">
-                <img src="https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?q=80&w=800" alt="Investigación y Libros">
-            </div>
-            <div class="card-content">
-                <span class="card-tag">Memoria Académica</span>
-                <h3>Justificación y Criterios Editoriales del Proyecto</h3>
-                <p>Análisis de los factores de interés informativo, objetivos del despliegue multimedia, idoneidad de las fuentes elegidas y concepto del diseño del vertical.</p>
-            </div>
-        </a>
-    </main>
-
     <footer>
         <p><strong>Facultad de Ciencias de la Información</strong></p>
-        <p>Universidad Complutense de Madrid · Proyecto de Innovación Docente</p>
+        <p>Universidad Complutense de Madrid · Trabajo Evaluatorio</p>
     </footer>
 
 </body>
