@@ -6,7 +6,7 @@
     <title>Reportaje — Especial IA</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Lora:ital,wght@0,400;0,600;1,400&family=Plus+Jakarta+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Plus+Jakarta+Sans:wght@400;500;700&display=swap" rel="stylesheet">
     <style>
         :root {
             --bg: #fdfdfb;
@@ -14,7 +14,6 @@
             --muted: #5a5a5a;
             --accent: #8b1e0f;
             --border: #eaeaea;
-            --font-title: 'Cinzel', serif;
             --font-serif: 'Lora', Georgia, serif;
             --font-sans: 'Plus Jakarta Sans', sans-serif;
         }
@@ -23,7 +22,7 @@
         
         .site-nav { position: sticky; top: 0; background: rgba(253, 253, 251, 0.98); border-bottom: 1px solid var(--border); z-index: 1000; padding: 15px 20px; backdrop-filter: blur(8px); }
         .nav-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
-        .nav-logo { font-family: var(--font-title); font-weight: 700; font-size: 1.3rem; text-decoration: none; color: var(--text); }
+        .nav-logo { font-family: var(--font-serif); font-weight: 700; font-size: 1.3rem; text-decoration: none; color: var(--text); letter-spacing: 0.5px; }
         .nav-links { display: flex; list-style: none; gap: 30px; }
         .nav-links a { text-decoration: none; color: var(--muted); font-size: 0.9rem; font-weight: 500; text-transform: uppercase; }
         .nav-links a:hover { color: var(--accent); }
@@ -41,11 +40,11 @@
         .article-body p { margin-bottom: 30px; text-align: justify; }
         
         /* Letra capitular */
-        .article-body p:first-of-type::first-letter { font-family: var(--font-title); font-size: 4.2rem; float: left; margin-top: 8px; margin-right: 10px; line-height: 1; color: var(--accent); font-weight: 700; }
+        .article-body p:first-of-type::first-letter { font-family: var(--font-serif); font-size: 4.5rem; float: left; margin-top: 6px; margin-right: 12px; line-height: 1; color: var(--accent); font-weight: 700; }
 
         /* Cajas de entrevistas espectaculares */
         .quote-card { background: #fff; border: 1px solid var(--border); border-left: 4px solid var(--accent); padding: 35px; margin: 45px 0; box-shadow: 0 5px 20px rgba(0,0,0,0.02); position: relative; }
-        .quote-card::before { content: "“"; font-family: var(--font-title); font-size: 5rem; color: #f0d0cc; position: absolute; top: -10px; left: 20px; z-index: 1; opacity: 0.5; }
+        .quote-card::before { content: "“"; font-family: var(--font-serif); font-size: 5rem; color: #f0d0cc; position: absolute; top: -10px; left: 20px; z-index: 1; opacity: 0.5; }
         .quote-text { position: relative; z-index: 2; font-style: italic; margin-bottom: 15px !important; font-size: 1.25rem; color: #111; }
         .quote-author { font-family: var(--font-sans); font-size: 0.9rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: var(--accent); }
 
